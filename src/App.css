@@ -135,7 +135,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
   .landing_content {
     margin-top: 50px; /* Adjust as needed */
     width: 90%; /* Adjust as needed */

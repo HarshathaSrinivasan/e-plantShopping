@@ -2,6 +2,7 @@
 body, h1, ul {
     margin: 0;
     padding: 0;
+    align-items: center;
 }
 
 /* Set a background color */
@@ -213,6 +214,11 @@ body {
   
   .product-button:hover {
     background-color: #45a049;
+  }
+
+  .heavy{
+    font: bold 90px sans-serif;
+    fill :#fff;
   }
   
   .product-button.added-to-cart {
