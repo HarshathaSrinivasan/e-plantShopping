@@ -9,14 +9,12 @@ function ProductList() {
     const [showPlants, setShowPlants] = useState(false); // State to control the visibility of the About Us page
     const[addedToCart,setAddedToCart] = useState({});
     const[cartQuantity,setCartQuantity] = useState(0);
-    const[cartButtonDisable,setCartButtonDisable]=useState(false);
     const dispatch = useDispatch();
     const handleAddToCart=(plant)=>{
         dispatch(addItem(plant));
         setAddedToCart((prevState)=>({
             ...prevState,[plant.name]:true,
         }));
-        setCartButtonDisable(!cartButtonDisable);
     }
     useEffect(() => setCartQuantity(Object.keys(cart).length));
     const plantsArray = [
@@ -298,7 +296,7 @@ const handlePlantsClick = (e) => {
                             <div className="product-price">{plant.cost}</div>
                             <div>{plant.description}</div>
                             <button  className="product-button" 
-                            disabled={cartButtonDisable} onClick={() => handleAddToCart(plant)}>Add to Cart</button>
+                             onClick={() => handleAddToCart(plant)}>Add to Cart</button>
                         </div> 
                     ))}
                 </div>
